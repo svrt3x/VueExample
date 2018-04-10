@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cycles Vue.js</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="show = !show">Show/Hide</button>
+        <p v-if="show">Text If</p>
+        <p v-else="show">Text Else</p>
+        <ul>
+            <li v-for="(car, i) in cars">{{i + 1}} - {{ car.model }}, speed: {{ car.speed }}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/cycles.js"></script>
+</body>
+</html>
